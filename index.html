@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .filter-btn.active { @apply bg-black text-white; }
-        .gallery-item.hidden { display: none; }
+        .filter-btn.active {
+            @apply bg-black text-white;
+        }
+
+        .gallery-item.hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans">
 
     <header class="py-10 text-center">
         <h1 class="text-4xl font-bold tracking-widest uppercase">B-Shadow Photography</h1>
         <p class="text-gray-500 mt-2 italic">Capturing moments through a lens</p>
     </header>
-<!--
+    <!--
     <nav class="flex justify-center space-x-4 mb-12">
         <button onclick="filterSelection('all')" class="filter-btn px-6 py-2 border border-black rounded-full hover:bg-black hover:text-white transition active">All</button>
         <button onclick="filterSelection('party')" class="filter-btn px-6 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">Party</button>
@@ -28,12 +35,18 @@
 
     <main class="max-w-6xl mx-auto px-4">
         <div id="gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="gallery-item party"><img src="images/01.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
-            <div class="gallery-item portrait"><img src="images/02.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
-            <div class="gallery-item travel"><img src="images/03.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
-            <div class="gallery-item street"><img src="images/04.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
-            <div class="gallery-item party"><img src="images/06.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
-            <div class="gallery-item portrait"><img src="images/07.JPG" class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item party"><img src="images/01.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item portrait"><img src="images/02.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item travel"><img src="images/03.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item street"><img src="images/04.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item party"><img src="images/06.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
+            <div class="gallery-item portrait"><img src="images/07.JPG"
+                    class="w-full h-80 object-cover rounded shadow-lg zoomable"></div>
         </div>
     </main>
     <!-- Zoom Modal -->
@@ -45,14 +58,14 @@
     <section class="bg-white py-20 mt-20 border-t">
         <div class="max-w-3xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center">Work With Me</h2>
-            <iframe
-              src="https://forms.gle/ZHL7ZnnXYZJ6eHG19"
-              width="100%"
-              height="900"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0">
-            </iframe>
+
+            <!-- Responsive Google Form container -->
+            <div class="w-full">
+                <iframe class="w-full rounded-lg border border-gray-200 shadow-sm" style="height: min(900px, 85vh);"
+                    src="https://forms.gle/ZHL7ZnnXYZJ6eHG19" frameborder="0" marginheight="0" marginwidth="0"
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -68,7 +81,7 @@
             // Update button styles
             for (let btn of buttons) {
                 btn.classList.remove('active', 'bg-black', 'text-white');
-                if(btn.innerText.toLowerCase() === category) btn.classList.add('active', 'bg-black', 'text-white');
+                if (btn.innerText.toLowerCase() === category) btn.classList.add('active', 'bg-black', 'text-white');
             }
 
             // Filter images
@@ -105,4 +118,5 @@
         });
     </script>
 </body>
+
 </html>
